@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--禁止缩放-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!--若是IE浏览器，首选GCF进行渲染，未安装再使用IE最高版本的内核进行渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Image Explorer</title>
+    <!--  加载css文件  -->
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+    <!--  加载ico文件  -->
+    <link rel="shortcut icon" href="ico.ico"/>
+    <!--  加载JavaScript文件  -->
+    <script type="text/javascript" src="axios.js"></script>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript" src="danfo.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <!--  加载腾讯地图  API-->
+    <script type="text/javascript" charset="utf-8"
+            src="https://map.qq.com/api/gljs?v=1.exp&key=3QLBZ-BYRCK-43WJO-AX4G7-GTIAF-FUFBG"></script>
+</head>
+<body>
+<div id="map"></div>  <!--地图显示容器-->
+<script type="text/javascript">setMap();</script>  <!--  加载地图  -->
+<!--  非地图的部分  -->
+<div id="toolbox">
+    <div id="constraint">
+        <div id="region" class="condition">
+            <p>区域选择</p>
+            <p>▽</p>
+        </div>
+        <div id="region_menu" class="menu">
+            <div id="region_1">
+                <input type="radio"  id="region_radio_p" checked="checked" />
+                <p>path/row</p>
+                <input type="radio"  id="region_radio_c" />
+                <p>coordinate</p>
+            </div>
+        </div>
+        <div id="time" class="condition">
+            <p>时间选择</p>
+            <p>▷</p>
+        </div>
+        <div id="type" class="condition">
+            <p>数据类型</p>
+            <p>▷</p>
+        </div>
+    </div>
+    <div id="result">
+
+    </div>
+</div>
+</body>
+</html>
+
